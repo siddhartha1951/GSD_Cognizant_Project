@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 public class BaseClass {
 
 	public static WebDriver driver;
-	@BeforeClass
+	@BeforeTest
 	public void setup()
 	{
 		//ChromeOptions options=new ChromeOptions();
@@ -22,13 +22,13 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.get("https://be.cognizant.com");
 		
 		
 		driver.manage().window().maximize();
 	}
 	
-	@AfterClass
+	@AfterTest
 	public void tearDown()
 	{
 		driver.quit();

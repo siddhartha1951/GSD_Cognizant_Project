@@ -15,16 +15,16 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	public static FileInputStream fi;   
-	public static FileOutputStream fo;
-	public static XSSFWorkbook wb;       
-	public static XSSFSheet ws;			 
-	public static XSSFRow row;
-	public static XSSFCell cell;
-	public static CellStyle style;   
+	public static FileInputStream fi;    // FileInputStream Global Variable
+	public static FileOutputStream fo;   // FileOutputStream Global Variable
+	public static XSSFWorkbook wb;       // Excel Workbook Global Variable
+	public static XSSFSheet ws;			 // Excel Sheet Global Variable
+	public static XSSFRow row;			 // Excel Row Global Variable
+	public static XSSFCell cell;		 // Excel Cell Global Variable
+	public static CellStyle style;   	 // Excel style Global Variable
 	
 	//count rows present in excel sheet
-	public static int getRowCount(String xlfile,String xlsheet) throws IOException 
+	public int getRowCount(String xlfile,String xlsheet) throws IOException 
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
@@ -36,7 +36,7 @@ public class ExcelUtils {
 	}
 	
 	// count total no. of cells in the row 
-	public static int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
+	public int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
@@ -49,7 +49,7 @@ public class ExcelUtils {
 	}
 	
 	// read data from excel sheet method
-	public static String getCellData(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
+	public String getCellData(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
@@ -78,7 +78,7 @@ public class ExcelUtils {
 	
 	
 	// write data on excel sheet cells 
-	public static void setCellData(String xlfile,String xlsheet,int rownum,int colnum,String data) throws IOException
+	public void setCellData(String xlfile,String xlsheet,int rownum,int colnum,String data) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
@@ -95,7 +95,7 @@ public class ExcelUtils {
 	}
 	
 	// filling green colour in cells 
-	public static void fillGreenColor(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
+	public void fillGreenColor(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
@@ -117,7 +117,7 @@ public class ExcelUtils {
 	}
 	
 	//filling red colour in cells
-	public static void fillRedColor(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
+	public void fillRedColor(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
 	{
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);

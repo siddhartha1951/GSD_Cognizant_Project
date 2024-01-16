@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-10T20:53:53 IST" name="Suite" finished-at="2024-01-10T20:54:22 IST" duration-ms="28937">
+  <suite started-at="2024-01-16T22:01:02 IST" name="Suite" finished-at="2024-01-16T22:03:06 IST" duration-ms="124626">
     <groups>
     </groups>
-    <test started-at="2024-01-10T20:53:53 IST" name="Test1" finished-at="2024-01-10T20:54:22 IST" duration-ms="28937">
-      <class name="testCases.TC002_OneCognizant">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC002_OneCognizant@543295b0]" started-at="2024-01-10T20:53:53 IST" name="setup" finished-at="2024-01-10T20:54:06 IST" duration-ms="12525" status="PASS">
+    <test started-at="2024-01-16T22:01:02 IST" name="Test" finished-at="2024-01-16T22:03:06 IST" duration-ms="124626">
+      <class name="testCases.TC003_GSDPage">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:02 IST" name="setup" finished-at="2024-01-16T22:01:19 IST" duration-ms="16282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="beCognizantValidation()[pri:1, instance:testCases.TC002_OneCognizant@543295b0]" started-at="2024-01-10T20:54:06 IST" name="beCognizantValidation" finished-at="2024-01-10T20:54:18 IST" duration-ms="11793" status="PASS">
+        <test-method signature="beCognizantTextValidation()[pri:1, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:19 IST" name="beCognizantTextValidation" finished-at="2024-01-16T22:01:20 IST" duration-ms="1606" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beCognizantValidation -->
-        <test-method signature="oneCognizantValidation()[pri:2, instance:testCases.TC002_OneCognizant@543295b0]" started-at="2024-01-10T20:54:18 IST" name="oneCognizantValidation" finished-at="2024-01-10T20:54:21 IST" duration-ms="3278" status="PASS">
+        </test-method> <!-- beCognizantTextValidation -->
+        <test-method signature="profileValidation()[pri:2, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:20 IST" name="profileValidation" finished-at="2024-01-16T22:01:24 IST" duration-ms="4260" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oneCognizantValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_OneCognizant@543295b0]" started-at="2024-01-10T20:54:21 IST" name="tearDown" finished-at="2024-01-10T20:54:22 IST" duration-ms="1205" status="PASS">
+        </test-method> <!-- profileValidation -->
+        <test-method signature="oneCognizantTextValidation()[pri:3, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:24 IST" name="oneCognizantTextValidation" finished-at="2024-01-16T22:01:25 IST" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneCognizantTextValidation -->
+        <test-method signature="navigateOneCognizant()[pri:4, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:25 IST" name="navigateOneCognizant" finished-at="2024-01-16T22:01:35 IST" duration-ms="10479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateOneCognizant -->
+        <test-method signature="searchGsd()[pri:5, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:35 IST" name="searchGsd" finished-at="2024-01-16T22:01:39 IST" duration-ms="3494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchGsd -->
+        <test-method signature="clickOnGSD()[pri:6, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:01:39 IST" name="clickOnGSD" finished-at="2024-01-16T22:02:14 IST" duration-ms="35488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnGSD -->
+        <test-method signature="verifyMessage()[pri:7, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:14 IST" name="verifyMessage" finished-at="2024-01-16T22:02:14 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMessage -->
+        <test-method signature="verifyDefaultLanguage()[pri:8, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:14 IST" name="verifyDefaultLanguage" finished-at="2024-01-16T22:02:14 IST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultLanguage -->
+        <test-method signature="verifyDefaultCountry()[pri:9, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:14 IST" name="verifyDefaultCountry" finished-at="2024-01-16T22:02:14 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultCountry -->
+        <test-method signature="verifyAvailableLanguages()[pri:10, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:14 IST" name="verifyAvailableLanguages" finished-at="2024-01-16T22:02:17 IST" duration-ms="2865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAvailableLanguages -->
+        <test-method signature="verifyAvailableCountries()[pri:11, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:17 IST" name="verifyAvailableCountries" finished-at="2024-01-16T22:02:29 IST" duration-ms="11610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAvailableCountries -->
+        <test-method signature="indiaTickets()[pri:12, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:29 IST" name="indiaTickets" finished-at="2024-01-16T22:02:35 IST" duration-ms="6042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- indiaTickets -->
+        <test-method signature="randomCountry1()[pri:13, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:02:35 IST" name="randomCountry1" finished-at="2024-01-16T22:03:05 IST" duration-ms="29999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- randomCountry1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_GSDPage@4c60d6e9]" started-at="2024-01-16T22:03:05 IST" name="tearDown" finished-at="2024-01-16T22:03:06 IST" duration-ms="1409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC002_OneCognizant -->
-    </test> <!-- Test1 -->
+      </class> <!-- testCases.TC003_GSDPage -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC001_BeCognizant">
+      <class name="testCases.TC003_GSDPage">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="beCognizantValidation"/>
+          <include name="randomCountry1"/>
         </methods>
-      </class> <!-- testCases.TC001_BeCognizant -->
+      </class> <!-- testCases.TC003_GSDPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -12,14 +12,41 @@ public class OneCognizant extends BeCognizant{
 	}
 	
 	//Elements
+	
+	// Search Input Area element(For Chrome Browser )
 	@FindBy(xpath = "//input[@id='oneC_searchAutoComplete']")
 	WebElement inputSearchText;
 	
+	// GSD-Live Support Button element after searching GSD
+	@FindBy(xpath = "//div[@class = 'appsResultText']")
+	WebElement btnGsd;
 	
+	// Search Input Area element (For Edge Browser)
+	@FindBy(xpath="//input[@id='oneCSearchTop']")
+	WebElement edgesearchbar;
+	
+	// Search Icon Element (For Edge Browser)
+	@FindBy(xpath="//ul[@class='searchBasedTopBar']/li")
+	WebElement magnifier;
+
 	
 	//Actions
-	public void searchText() {
-		inputSearchText.sendKeys("GSD");
+	
+	// Click on the Search Icon and Searching for GSD(For Edge Browser)
+	public void clickandsearchmagnifier(String key) {
+		magnifier.click();
+		edgesearchbar.sendKeys(key);
+	}
+	
+	// Giving input "GSD" in the search Text Area
+	public void searchText(String key) {
+		inputSearchText.sendKeys(key);
+	}
+	
+	// Click on the Live Support - GSD Button
+	public void clickOnGsd() {
+		btnGsd.click();
+		driver.switchTo().frame("appFrame");
 	}
 	
 	

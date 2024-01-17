@@ -19,7 +19,7 @@ public class TC001_BeCognizant extends BaseClass{
 		String text = bCog.beCognizantVisibility();
 		Assert.assertEquals(text,p.getProperty("beCognizantText"));		 //Validation
 		
-		logger.info("--//beCognizant Validation Done//--");
+		logger.info("--//beCognizant text Validation Done//--");
 	}
 	
 	
@@ -33,11 +33,14 @@ public class TC001_BeCognizant extends BaseClass{
 		Thread.sleep(3000);
 		
 		ss.ScreenShot("BeCognizantProfile.png");     // Screenshot 1: if the Profile is displayed
-		
+		logger.info("--//BeCognizant Profile Screenshot Taken//--");
 		String userName = bCog.usernameVisibility();
 		Assert.assertEquals(userName, p.getProperty("name"));   // Check if Name is correct
+		logger.info("--//beCognizant profile Name Validation Done//--");
+		
 		String userEmail = bCog.emailVisibility();
 		Assert.assertEquals(userEmail, p.getProperty("email"));	// Check if Email is correct
+		logger.info("--//beCognizant profile Email Validation Done//--");
 		
 		
 	}
@@ -48,6 +51,7 @@ public class TC001_BeCognizant extends BaseClass{
 		BeCognizant bCog = new BeCognizant(driver);
 		boolean textOneCognizant = bCog.oneCognizantVisibility().equalsIgnoreCase(p.getProperty("oneCognizantText"));
 		Assert.assertEquals(textOneCognizant,true);        // Validation
+		logger.info("--//OneCognizant text Validation Done//--");
 	}
 	
 	//Test 4: Navigate to OneCognizant 
@@ -56,9 +60,12 @@ public class TC001_BeCognizant extends BaseClass{
 		BeCognizant bCog = new BeCognizant(driver);
 		bCog.clickOneCognizant();
 		
+		logger.info("--//Switch to OneCognizant from BeCognizant Done//--");
 		Screenshots ss = new Screenshots();
 		Thread.sleep(5000);
 		ss.ScreenShot("OneCognizant.png");     // Screenshot 2: of OneCognizant Page
+		logger.info("--//OneCognizant Screenshot Taken//--");
+		
 	}
 
 }

@@ -22,10 +22,10 @@ public class TC002_OneCognizant extends TC001_BeCognizant {
 		else {
 			oneCog.searchText(p.getProperty("searchText"));
 		}
-		
+		logger.info("--//Search 'GSD' Done//--");
 		Thread.sleep(3000);
 		ss.ScreenShot("SearchResult.png");    // Screenshot 3: Getting the search Result screenshot
-		
+		logger.info("--//'GSD' Search Result Screenshot Taken//--");
 	}
 	
 	//Test 6: Clicking on the GSD Button
@@ -34,8 +34,9 @@ public class TC002_OneCognizant extends TC001_BeCognizant {
 		OneCognizant oneCog = new OneCognizant(driver);
 		Screenshots ss = new Screenshots();
 		oneCog.clickOnGsd();
+		logger.info("--//Click on 'GSD' Done//--");
 		Thread.sleep(5000);
 		ss.ScreenShot("GSDIndia.png");        // Screenshot 4: GSD India page screenshot
-		
+		logger.info("--//'GSD' Page Screenshot Taken//--");
 	}
 }

@@ -22,7 +22,9 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		String browseText = gsdP.getBrowseMsg();
 		
 		Assert.assertEquals(welcomeText, p.getProperty("WelComeMessage"));
+		logger.info("--//Welcome Message Verified//--");
 		Assert.assertEquals(browseText, p.getProperty("BrowseMessage"));
+		logger.info("--//Browse Message Verified//--");
 	}
 	
 	// Test 8: Verify if the Default Lnaguage is present ("English")
@@ -31,6 +33,7 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		GSDPage gsdP = new GSDPage(driver);
 		String lang = gsdP.getDefaultLanguage();
 		Assert.assertEquals(lang, p.getProperty("defaultLanguage"));
+		logger.info("--//Default Language Verified//--");
 	}
 	
 	// Test 8: Verify if the Default Country is present ("India")
@@ -39,6 +42,7 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		GSDPage gsdP = new GSDPage(driver);
 		String country = gsdP.getDefaultCountry();
 		Assert.assertEquals(country, p.getProperty("defaultCountry"));
+		logger.info("--//Default Country Verified//--");
 	}
 	
 	//Test 9: Get all available Languages and print on console and write into testexcel.xslx
@@ -54,11 +58,12 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		
 		Screenshots ss = new Screenshots();
 		ss.ScreenShot("Languages.png");						//Getting the screenshot of Languages
-		
+		logger.info("--//Screenshot taken showing all languages//--");
 		for(int l = 0 ; l< lang.size();l++) {
 			System.out.println(lang.get(l).getText());    // Print all lnaguages on console
 			excel.setCellData(xlFile, "Lnaguages", l+1, 0, lang.get(l).getText());     // Write all languages in testexcel.xlsx
 		}
+		logger.info("--//All AVailable Languages Taken//--");
 	}
 	
 	
@@ -76,7 +81,7 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		Screenshots ss = new Screenshots();
 		Thread.sleep(2000);
 		ss.ScreenShot("Countries.png");         // Getting the screenshot of Countries 
-		
+		logger.info("--//Screenshot taken showing all countries//--");
 		int size = countr.size(); 
 		System.out.println("Total countries available = " + size);    // Printing the total No. of countries available
 		
@@ -84,6 +89,7 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 			System.out.println(countr.get(c).getText());				// Print all countries name on console
 			excel.setCellData(xlFile, "Countries", c+1, 0, countr.get(c).getText());		//write all countries name in testexcel.xlsx
 		}
+		logger.info("--//All AVailable Countries Taken//--");
 	}
 
 
@@ -107,6 +113,8 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 		//Writing Name of country
 		excel.setCellData(xlFile, sheetName, 10, 0, defaultCountry);
 		excel.fillGreenColor(xlFile, sheetName, 10, 0);
+		
+		logger.info("--//All AVailable Tickets of Default Country Taken//--");
 	}
 
 	//Test 13: Picking 2 random countries and getting all the ticket details
@@ -161,6 +169,7 @@ public class TC003_GSDPage extends TC002_OneCognizant{
 				break;
 			}
 		}
+		logger.info("--//All AVailable Tickets of 2 Random Countries Taken//--");
 		
 	}
 	

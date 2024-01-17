@@ -83,7 +83,7 @@ public class ExcelUtils {
 		fi=new FileInputStream(xlfile);
 		wb=new XSSFWorkbook(fi);
 		ws=wb.getSheet(xlsheet);
-		row=ws.getRow(rownum);
+		row=ws.getRow(rownum);   
 		cell=row.createCell(colnum);
 		cell.setCellValue(data);
 		fo=new FileOutputStream(xlfile);
